@@ -1,0 +1,149 @@
+/* comentarios */
+/* Selectores
+    selector{
+        propiedad:valor,
+        propiedad:valos,
+        propiedad:valos
+    }
+*/
+
+/* selector universal -> aplica a todas las etiquetas del HTML*/
+*{
+    margin: 0;
+    box-sizing: border-box;/* defino si quiero que en el tamaño definido de la etiqueta integre o no el padding y el border*/
+}
+/* por etiqueta -> escribo el nombre de la etiqueta*/
+body{
+    background-color: pink;
+}
+h1{
+    background-color: rgb(66, 23, 46);
+    color: white;
+    /* height: 80%; no me lo aplica por que no tengo un valor definido fijo del alto del body*/
+    height: 10vh;/* el alto es el 80% del alto de la pantalla(browser)*/
+    margin: 0;/*le saco el margin que tiene (tambien aplica para la propiedad padding)*/
+}
+p{
+    color: blueviolet;
+    /* margin-top: 80px;
+    margin-bottom: 22px;
+    margin-left: 30px; */
+    margin: 80px 23px 22px 30px;
+     /*
+        1 valor -> aplica esa unidad a todos los extremos
+        2 valores -> aplica el primer valor a los margenes superior e inferior; y el segundo valor a los margenes laterales.
+        4 valores -> aplica a cada uno de los extremos los valores asignados iniciando por el superior y continuacion en sentido horario
+    */
+}
+
+button{
+    background-color: #a0b9da;
+    /* padding-left: 30px;
+    padding-top: 22px;
+    padding-bottom: 35px;
+    padding-right: 56px; */
+    /* padding:30px; */
+    /* padding: 22px 56px 35px 30px; */
+    padding: 22px 56px ;
+
+    /*
+        1 valor -> aplica esa unidad a todos los extremos
+        2 valores -> aplica el primer valor a los rellenos superior e inferior; y el segundo valor a los rellenos laterales.
+        4 valores -> aplica a cada uno de los extremos los valores asignados iniciando por el superior y continuacion en sentido horario
+    */
+}
+
+a{
+    /* border:solid black 10px ; */
+    /* borde de todos los extremos : ancho del borde, tipo de borde, color del borde */
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width:5px ;
+    padding: 5px;
+    height: 20px;
+    box-sizing: border-box;
+}
+/* por clase -> escribo un punto y a continuacion el nombre de la clase */
+
+h2{
+    color: crimson;
+    margin-bottom: 20px;
+}
+.texto{
+    color: green!important;
+    background-color: rgba(40, 220, 199, 0.2);
+}
+
+.subtitulo1{
+    height: 50px;
+}
+#tituloh2{
+    color: dodgerblue;
+}
+
+.tarjeta{
+    width: 80vw;
+    height: 500px;
+    background-color: coral;
+    padding: 50px;
+}
+/*por id -> escribo #(numeral) y a continuacion el nombre del id */
+
+#botonParticular{
+    color: red;
+}
+#texto-tarjeta{
+    width: 50%;
+    height: 20%;
+    background-color: aqua;
+}
+
+
+#resaltar{
+    background-color: darkred;
+    color: white;
+}
+/* selectores compuestos (usa otras etiquetas como referencia) */
+
+
+/* algunas propiedades:
+
+    color-> color de la tipografia
+    background-color -> color de fondo de una etiqueta
+    width -> ancho de una etiqueta
+    height -> alto de una etiqueta
+
+    modelo de caja
+
+    padding -> relleno de la etiqueta
+    border -> contorno|borde de la etiqueta
+    margin -> espacio entre etiquetas , margen de la etiqueta
+
+*/
+/* para definir colores:
+colores primarios -> rojo verde azul
+
+-colores predefinidos por CSS
+
+-rgb| rgba (red green blue) - a ->transparencia: 0-1 (numeros decimal usamos punto en vez de coma)
+
+-hexadecimal ->par de digitos asignado para cantidad de rojo, verde y azul .Se escriben con un numeral adelante .A-F y 0-9
+si quiero transparencia le agrego un par de digitos mas al final
+
+*/
+/* unidades de medida
+- porcentaje -> % ( se fija la unidad de esa propiedad del padre y saca elporcenteje para el valor de el elemento hijo ) 
+- view height - view width->vh vw -> hace referencia a un porcentaje del tamaño de la pantalla
+
+-pixeles -> px
+*/
+
+/* gerarquia 
+el selector mas especifico es el que prevalece
+id > class > selector por etiqueta
+*/
+
+/* !important -> cuidado en no abusar de este uso, evitarlo si es posible para no forzar la gerarquia*/
+
+/* clase proxima iniciamos con tipografia,sombras,posicionamiento - maquetacion web */
