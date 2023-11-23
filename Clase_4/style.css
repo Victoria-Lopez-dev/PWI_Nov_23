@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&family=Oswald:wght@300&display=swap');
+/*selectores compuestos -> referencia a una/s etiqueta/s utilizando otra*/
+
+/* > + ~ */
+/* @font-face {
+    font-family: 'Tipografia';
+    src: url('./');
+} */
+/* html{
+    font-size: 30px;
+} */
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;/*propiedad que permite(o no) que integre al tamaño final del elemento el tamaño del padding y el border -> content-box|border-box */
+}
+
+a{
+    background-color: gray;
+    padding: 5px;
+    text-decoration: none;
+    
+}
+.titulo{
+    color: green;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:100;/* peso de la tipografia 100-900 | bold-bolder-light-lighter*/
+    font-size:50px ;/* px - rem - em */
+    width: fit-content;/* para que ocupe solo el espacio que necesita*/
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+    text-shadow:3px -4px 3px rgb(132, 18, 18),
+                4px 7px #d9ff00 ,
+                6px 10px violet;
+    /* valores positivos (derecha -abajo) | valores negativos (izquierda-arriba)
+    el tercer valor antes del color es el difuminado(px y positivo , cuanto mas grande mas difuminado*/
+}
+#parrafoUnico{
+    background-color: #ffc0cb;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: 2em; 
+    text-decoration: line-through;/*propiedad para subrayar la tipografia , el line-through lo que hace es que la linea este por el medio (tachado)*/
+}
+#boton{
+    color: chocolate;
+} 
+/* estilar al elemento que se encuentra despues de el primero (hermanos) */
+p + .clase1{
+    background-color: darkblue;
+    color: white;
+}
+/* estila al elemento hermano de otro */
+
+ul~p{
+    background-color: chartreuse;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* estila el/los elemento/s que se encuentran dentro del elemento de la izquierda */
+div>p{
+    color: darkgreen;
+}
+
+/* div>ul>li{
+
+} */
+/*listo a selectores que quiero que tengan esas propiedades*/
+.tituloh3,li{
+    border: 2px solid black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+
+h2{
+    text-transform: uppercase;
+}
+
+.seccion{
+    width: 400px;
+    padding: 10px;
+    background-color: cornflowerblue;
+    box-shadow: 5px 5px 8px gray;
+}
+/*
+unidades de tipografias:
+-px ( evitar tipografias menores a 12px - standar 14px-16px
+-em -> 1em = 16px | 2em=32px 
+-rem -> 1rem = 16px si no defini otro valor en el elemento raiz (html-body)
+
+sombras -> grosor color difuminado
+box-shadow
+text-shadow
+*/
+
+/* landmarks - maquetacion web -> etiquetas HTML estructuran al sitio (permite seccionarlo)*/

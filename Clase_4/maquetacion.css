@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.navegacion{
+    background-color: pink;
+}
+
+ul{
+    list-style: none;/*sacar las viñetas*/
+}
+
+.tarjeta{
+    width: 400px;
+    border: 2px solid violet;
+    margin: 10px;
+    background-color: lightblue;
+    padding: 20px;
+}
+.pie-de-pagina{
+    background-color: pink;
+}
+img{
+    width: 90px;
+}
+.cabecera{
+    text-align: center;
+    padding: 50px;
+    background-color: burlywood;
+}
+header{
+    border: 3px dashed red;
+}
+.boton-compra{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+
+.tarjeta>p{
+    width: 80%;
+    padding: 20px;
+}
