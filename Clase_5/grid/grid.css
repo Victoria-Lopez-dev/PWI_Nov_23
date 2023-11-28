@@ -1,0 +1,38 @@
+.contenedor{
+    background-color: darkcyan;
+    width: 800px;
+    display: grid;
+    /*para armar la grilla*/
+
+    /* grid-template-columns:300px 100px 300px; -> 700px (sobran 100px)*/
+   /* grid-template-columns: 300px 400px 300px; -> 1000px(sobran 200px) */
+   grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 410px 410px;
+ /* grid-template-rows: repeat(2,410px); simplificamos en vez de tener que repetir el mismo valor por cada columna*/
+    /* repeat(cantidad,tamaño)*/
+    row-gap: 20px;/* espacio entre las filas*/
+    column-gap: 30px;/* espacio entre las columnas*/
+}
+.tarjeta{
+    width: 200px;
+    height: fit-content;
+    border: 2px solid violet;
+    background-color: lightsalmon;
+
+}
+img{
+    width: 200px;
+}
+#uno{
+    background-color: greenyellow;
+    grid-column:1/3 ;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+}
+
+#dos{
+    justify-self: center;
+    /*align-self -> para alinear a la tarjeta dentro del casillero */
+}
+/* grid -> fr fraccion*/
