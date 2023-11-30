@@ -1,0 +1,18 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    text-align: center;
+}
+.contenedor-padre{
+    background-color: deepskyblue;
+    width: 800px;
+}
+.cubo{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #8b0000;
+    background-color: brown;
+    color: white;
+    font-size: 20px;
+}
