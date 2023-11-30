@@ -4,9 +4,14 @@
 h1{
     text-align: center;
 }
+section{
+    height: 600px;
+}
 .contenedor-padre{
     background-color: deepskyblue;
     width: 800px;
+    height: 1700px;
+    position: relative;
 }
 .cubo{
     width: 200px;
@@ -16,3 +21,57 @@ h1{
     color: white;
     font-size: 20px;
 }
+
+.static{
+    position: static;/* valor por defecto de position */
+    margin-left: 80px;
+}
+
+.relative{
+    background-color: darkgreen;
+    position: relative;/*nos permite mover al elemento(indicarle su posicion) a un lugar especifico - dejando el espacio de origen - utilizaba ese espacio como inicio (0,0)*/
+    left: 200px;
+    bottom: 100px;
+    z-index: 4;
+}
+
+.absolute{
+    background-color: gold;
+    color: black;
+    position: absolute; 
+    /* nos permite mover al elemento(indicarle su posicion) - saca al elemento de ese espacio de origen - toma de referencia inical (0,0) al primer elemento padre con position:relative .
+    Si no consige ningun elemento padre con position:relative, usa como(0,0) al body*/
+    top: 230px;
+    right: 520px;
+    z-index: 1;
+}
+
+.fixed{
+    background-color: pink;
+    color: black;
+    position: fixed;
+    /* como el absolute,lo saca del plano (saca al elemento de ese espacio de origen )
+    le damos posicionamiento (toma de referencia siembre el body) y queda fijo en ese lugar.
+    */
+    top: 43px;
+    right: 500px;
+    z-index: 0;
+}
+
+.sticky{
+    background-color: deeppink;
+    position: sticky;
+    /*es una mezcla relative-fixed .
+    si esta inmovil, se queda en la posicion en la que se encuentra ocupando un espacio.Pero al hacer scroll se vuelve fijo (fixed) ,tomando como referencia de las coordenadas al body y lo hace hasta donde se termine el padre .Vive solamente hasta donde termine el padre
+    */
+    left: 250px;
+    top: 0px;
+}
+/*
+    position -> static valor por defecto
+    top - bottom - left- right
+
+    z-index -> propiedad indicar el orden en que se solapan los elementos (funciona con cualquier elemento que tenga un position distinto a static)
+
+    valores de z-index -> numeros enteros sin unidad  cuanto mas grande , mas por encima esta
+    */

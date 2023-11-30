@@ -1,0 +1,35 @@
+
+.tarjeta{
+    width: 200px;
+    border: 2px solid purple;
+    background-color: salmon;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+section{
+    background-color: cornflowerblue;
+    width: 90%;
+    height: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.titulo-tarjeta{
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    background-color: white;
+}
+nav{
+    background-color: brown;
+    position: sticky;
+    top: 0px;
+}
