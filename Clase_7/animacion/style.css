@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    text-align: center;
+    width: 200px;
+    animation:mover 5s 1;
+    /* nombre animacion duracion cuantas veces 
+    cantidad de veces -> numero o infinite*/
+}
+.cont-padre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.cubo{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    font-size: 22px;
+    font-weight: bold;
+}
+.translate:hover{
+    background-color: brown;
+    transform:translate(-200px,33px) ;
+    transition: all 2s;
+    /*translate(x,y)| translateX(x) | translateY(y)
+    
+    numeros positivos trasladan hacia la derecha y abajo | numeros negativos hacia arriba y la izquierda*/
+}
+
+.rotate{
+    transform: rotate(-25deg);
+    /*rotate(x,y) | rotateX(x) | rotateY(y)
+    grados -> deg(degree)
+    valores positivos -> gira hacia la derecha (sentido horario)
+    valores negativos -> gira hacia la izquierda (sentido antihorario)
+    */
+    transition: transform 5s;
+}
+.rotate:active{
+    transform: rotate(360deg);
+}
+.scale{
+    background-color: gold;
+    transform: scale(0.5);
+    /*scale(x,y) | scaleX(x) | scaleY(y)
+    utiliza numeros sin unidad, escala al elemento (duplica, reduce,etc) */
+}
+.skew{
+    transform: skew(20deg,15deg);
+       /*skew(x,y) | skewX(x) | skewY(y) 
+       usa grados*/
+}
+.combinado:active{
+    background-color: pink;
+    transform: translateX(100px) rotate(80deg);
+    transition: all 2s;
+}
+/* transition -> transicion de un estado a otro (cualquier propiedad
+transition: propiedad duracion;(duracion en segundos) -> "s"
+variante all si queremos que todo cambio lo haga de manera progresiva
+
+*/
+
+/* animation -> secuencias de acciones (pasos)
+
+@keyframes nombreAnimacion{}*/
+
+@keyframes mover{
+    0%{
+        transform: translate(300px);
+    }
+    20%{
+        transform: translate(300px,200px);
+        background-color: greenyellow;
+    }
+    45%{
+        transform: translate(100px) rotate(-50deg);
+        background-color: red;
+        border-radius: 50%;
+    }
+    100%{
+        background-color: aqua;
+        transform: scale(2);
+    }
+}
+/* al ejecutar la animacion le indicamos cuanto dura - y con eso asigna en que tiempo ocurren esos cambios*/

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+*{
+   box-sizing: border-box; 
+   margin: 0;
+   padding: 0;
+   font-weight: 300;
+}
+body{
+    background-color: #333333;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+/* -------  menu principal  -------*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.logo{
+    width: 200px;
+}
+
+.menu{
+    list-style-type: none;
+    background-color: #333333;
+    display: flex;
+    gap: 10px;
+}
+li{
+    padding: 10px;
+}
+#hamb-check{
+    display: none;
+}
+/* -------  seccion tarjetas  -------*/
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    row-gap: 20px;
+    
+}
+.tarjeta{
+    width: 300px;
+    border: 5px solid lightblue;
+    background-color: darkslateblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+}
+
+.titulo-tarjeta{
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.tarjeta>img{
+    width: 100%;
+    border: 4px solid red;
+}
+.boton{
+    padding: 10px;
+    background-color: brown;
+    color:white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+.boton:active{
+    background-color: #00008b;
+    font-weight: 500;
+    border: 2px dashed #F90;
+}
+
+.submenu{
+    list-style-type: none;
+    background-color: pink;
+    color:black;
+    display: none;
+    position: absolute;
+    top:40px
+}
+.item-menu{
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburguesa{
+    width: 40px;
+    display: none;
+}
+li:hover{
+    background-color: #787777;
+    cursor: pointer;
+}
+/* -------  pie de pagina  -------*/
+
+footer{
+    padding: 20px;
+    background-color: darkgoldenrod;
+}
+
+
+@media(max-width:990px){
+    body{
+        background-color: coral;
+    }
+    section{
+        grid-template-columns:repeat(2,1fr);
+        column-gap: 20px;
+    }
+}
+@media(max-width:500px){
+
+    /* cuando pase el mouse por encima del menu hamburguesa(pseudoclase ->hover), mostrar el menu(display cambia)*/
+    .zona-menu{
+        display: none;
+        width: 100%;
+    }
+    .menu{
+        flex-direction: column;
+        
+    }
+    .hamburguesa{
+        display: block;
+    }
+    #hamb-check:checked+.zona-menu{ 
+        display: block;
+    } 
+      /* 
+    .hamburguesa:focus +.zona-menu{ 
+        display: block;
+    } 
+  
+    .hamburguesa:active +.zona-menu{ no funcionaria ,porque en cuanto dejo de pulsar,se oculta el menu
+        display: block;
+    } 
+    .hamburguesa:hover +.zona-menu{  si es que quiero otra alternativa que se acuando clickeo
+        display: block;
+    } */
+    section{
+        grid-template-columns:1fr;
+        
+    }
+}
+/* @media(breakpoint -> ancho de pantalla){
+    codigo que tiene que modificarse 
+} */
+
+/* 
+    min-width -> si nuestro modelo de mobile first ( inicio con diseño en anchos de pantalla pequeños) 
+    max-width -> si nuestro modelo inicia con un diseño en anchos de pantalla mas anchos ( desktop) 
+
+    anchos promedios de dispositivos :
+
+    desktop -> 1200px -1920px 990px(compus mas pequeñas)
+    tablet -> 768px - 800px 
+    mobile(celulares) -> 320px - 500px
+*/
+
+/*
+pseudoclases ->
+selector:pseudoclase{
+    propiedades
+}
+*/
+
