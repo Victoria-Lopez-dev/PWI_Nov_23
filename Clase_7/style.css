@@ -96,11 +96,14 @@ section{
     position: absolute;
     top:40px
 }
+
 .item-menu{
     position: relative;
     cursor: pointer;
 }
-
+.item-menu:hover>.submenu{
+    display: block;
+}
 .hamburguesa{
     width: 40px;
     display: none;

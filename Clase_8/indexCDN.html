@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="./bootstrap.min.css">--> <!-- variante bootwatch para otro estilo predeterminado-->
+    <link rel="stylesheet" href="./style.css"><!-- CSS que creamos nosotros para hacer las modificaciones que queremos-->
+    <title>Clase - 8</title>
+</head>
+<body class="bg-warning">
+
+  <nav class="navbar navbar-expand-md bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-desplegable" aria-controls="menu-desplegable" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-desplegable">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+      
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <h1>Utilizando Bootstrap</h1>
+    <h2 class="text-success bg-light text-center subtitulo w-50">Subtitulo</h2>
+    <h2 class="fs-5 ">Otro subtitulo</h2>
+    <h5>Titulo h5</h5>
+    <button class="btn botton-click ">Click!</button>
+
+    <!-- <section class="d-flex gap-3 justify-content-between"> -->
+        <section class="container-fluid">
+            <div class="row">
+                <h2 class="col-12">Seccion tarjetas</h2>
+            </div>
+            
+            <div class="row gap-3 justify-content-center">
+                <div class="col-sm-12 col-md-3 col-lg-7 tarjeta border border-primary rounded position-relative bg-info">
+                    <h3 class="position-absolute position-h3">Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-2 tarjeta border border-primary rounded position-relative">
+                    <h3 class="position-absolute position-h3">Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-2 tarjeta border border-primary rounded position-relative">
+                    <h3 class="position-absolute position-h3">Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>                
+            </div>
+        </section>
+
+    <section>
+        <div class="card my-4">
+            <img src="./imagenes/fast-delivery.png" class="card-img-top" alt="cohete">
+            <div class="card-body">
+              <h3 class=" card-title">Titulo de tarjeta</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur..</p>
+              <a href="#" class="btn btn-danger">Go somewhere</a>
+            </div>
+          </div>
+    </section>
+
+    <section>
+
+        <div id="primerCarousel" class="carousel slide carousel-dark">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#primerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#primerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#primerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#primerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./imagenes/img-card.jpg" class="d-block w-100" alt="fondo">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-dark">Info slide 1</h5>
+                  <p class="text-center text-uppercase">Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <a class="carousel-item" href="./index.html">
+                <img src="./imagenes/imagen1.jpeg" class="d-block w-100" alt="desayuno">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </a>
+              <div class="carousel-item">
+                <img src="./imagenes/img-card.jpg" class="d-block w-100" alt="fondo">
+              </div>
+              <div class="carousel-item">
+                <img src="./imagenes/imagen1.jpeg" class="d-block w-100" alt="desayuno">
+                <a class="carousel-caption d-none d-md-block" href="./index.html" target="_blank">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#primerCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#primerCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- Bootstrap tiene estilos definidos en clases que podemos utilizar y modificar
+
+    .text-
+    .bg -> background 
+    ....
+
+
+    Sistema de grillas
+    container | container-fluid > row > col
+
+    sm
+    md
+    lg
+    xl
+    xxl
+-->
