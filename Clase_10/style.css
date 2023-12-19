@@ -1,4 +1,9 @@
 h1{
     font-size: 40px;
     color: red;
+    background:linear-gradient(green,blue) ;
+    padding: 20px;
+}
+section{
+    background-color: pink;
 }
