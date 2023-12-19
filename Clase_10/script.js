@@ -34,7 +34,7 @@ false
 
 //almacenar informacion -> variables (espacio de memoria donde guardar info que utilizamos a lo largo de todo mi documento JS)
 
-//crear variable -> palabras recervadas (let - const -var)
+//crear variable -> palabras reservadas (let - const -var)
 
 //pal nombre= valor;
 
