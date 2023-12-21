@@ -56,7 +56,7 @@ numero1 == "333" && 100+150 >300 && "hola" ==resultado
 
 //or -> || "o" -> con que una de las operaciones me de true , el resultado final me da true
 
-const edad =15
+const edad =20
 const vengaConUnAdulto=false
 
 100+150 >30 || numero1>1000 || "hola" == resultado
@@ -82,17 +82,3 @@ let info;
 resultado<1000
 !true // -> false
 
-
-//operador ternario -> condicion indicarle si queremos que haga una accion u otra (condicional )
-
-//sintaxis -> condicion ? accion-si-condicion-true : accion-si-condicion-false
-
-// permitir comprar una entreda si es mayor o si viene con un adulto; sino no
-
-//      false
-edad>=16 || vengaConUnAdulto === true ? console.log("puede comprar la entrada") : console.log("no cumple con las condiciones para venderle la entrada ")
-
-
-numero1 == "333"? numero1+200 >330 ? console.log("ok"): console.log("valor menor a 330"):console.log("la variable numero1 no es igual al strin 333")
-
-//Condicionales if/else -> switch
