@@ -1,5 +1,5 @@
 let listaProductos=["pantalon","remera"];
-let listaRecaudacionDetallada=[3000,"pantalon",444,"media",555,"remera",2222,"remera",3333,444];
+const listaRecaudacionDetallada=[3000,"pantalon",444,"media",555,"remera",2222,"remera",3333,444];
 
 //objetos -> "describir" a una entidad , vincular distintas propiedades a un mismo objeto
 
