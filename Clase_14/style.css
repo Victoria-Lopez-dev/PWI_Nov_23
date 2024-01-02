@@ -1,0 +1,19 @@
+h2{
+    color: red;
+}
+.texto{
+    background-color: lightblue;
+}
+
+#textoB{
+    border: 2px solid tomato;
+}
+.clase3{
+    background-color: darkslategrey;
+    padding: 10px;
+}
+.contenedor{
+    background-color: lightgreen;
+    padding: 30px;
+    width: 100px;
+}
