@@ -1,0 +1,14 @@
+.contenedor{
+    border: 2px solid green;
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+.tarjeta{
+    width: 300px;
+    background-color: pink;
+    border: 2px solid violet;
+}
+section{
+    display: flex;
+    gap: 20px;
+}
