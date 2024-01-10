@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Clase 15</title>
 </head>
 <body>
+
+    <nav>
+        <ul class="menu">
+            <li>Item1</li>
+            <li onclick="mostrarSubmenu()">
+                Item2
+            </li>
+        </ul>
+        <ul class="submenu ocultar">
+            <li>subitem</li>
+            <li>subitem</li>
+        </ul>
+    </nav>
+
     <h2>Subtitulo hoja secundaria</h2>
     <button>Click!</button>
+    <button>Boton 2</button>
+
+
+    <button onclick="cambiarColorBoton(event)" onmouseover="cambioColor()">Boton 3</button>
     <script src="./eventos.js"></script>
 </body>
 </html>
