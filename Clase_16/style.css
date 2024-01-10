@@ -1,0 +1,17 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px 10px;
+    border: 2px solid violet;
+    align-items: start;
+}
+section{
+    margin: 40px 10px;
+    border: 2px dashed red;
+    background-color: lightcoral;
+    padding: 20px;
+    width: fit-content;
+    display: flex;
+    gap: 40px;
+}
