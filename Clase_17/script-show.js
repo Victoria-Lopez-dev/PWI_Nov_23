@@ -12,3 +12,9 @@ const mostrar=()=>{
     lista_previa.style.display='flex'
 }
 
+//menu desplegable con JS
+const desplegarMenu=()=>{
+    let menu=document.querySelector("ul");
+    menu.classList.toggle("mostrar")
+}
+
