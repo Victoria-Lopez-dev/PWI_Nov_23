@@ -12,7 +12,7 @@ const mostrarValor=(evento)=>{
         }
     }
 
-    evento.target.reset()
+   evento.target.reset()
     //formularios tienen un metodo llamado reset() que permite resetear el formulario
     
 };
@@ -61,7 +61,7 @@ const pausar=()=>{
 // //setTimeout() -> delay a la ejecucion de una funcion 
 // //setTimeout(funcionAEjecutar,tiempoEnMilisegundos)
 
-// //setTimeout(()=>{alert("Bienvenido!!")},3000)
+//setTimeout(()=>{alert("Bienvenido!!")},4000)
 
 // //Math -> objeto propio de JS que contiene funciones|metodos|estructuras matematicas complejas 
 
@@ -88,16 +88,23 @@ promedio(8,7,5);
 //Destructing
 
 const [al1,al2,al3]=["alumno1","alumno2","alumno4","alumno5"];
-
-
-let {edad,apellido}={nombre:"Julia",apellido:"Perez",edad:33};
 //genero 3 variables que contienen a c/u items del array
+let objeto={
+    nombre:"Julia",
+    apellido:"Perez",
+    edad:33}
 
-console.log(al1,al2,al3);
+let {edad,apellido}=objeto;
+//esto seria una alternativa a 
+// let edad= objeto.edad;
+// let apellido=objeto.apellido;
+//genero 2 variables : edad y apellido -> edad va a tener el valor de la propiedad "edad" del objeto "objeto"; y la variable apellido va a tener el valor de la propiedad "apellido" del objeto "objeto"
+
+console.log(al1);
 console.log(edad);
 
 //spread operator -> tomar todo el contenido de una lista|objeto
-
+//let lista=["prod1","prod2","prod3"]
 let lista2=[2,3,11,5,6,7,8];
 let lista3=[...lista2,...lista];
 
@@ -119,3 +126,4 @@ let propiedades={
     puertas:3
 }
 console.log({...auto,...propiedades})
+console.log({auto,propiedades})
