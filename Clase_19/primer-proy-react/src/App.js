@@ -24,4 +24,4 @@ function App() {
 
 export default App;
 
-//escrito en JSX 
+//escrito en JSX -> mezcla entre JS y HTML

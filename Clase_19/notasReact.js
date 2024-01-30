@@ -7,6 +7,7 @@
 
 //NPM -> Node Package Manager 
 
+//React esta escrito con JSX (mezcla entre JS y HTML )
 //terminal comandos para instalar paquetes
 
 //npm i nombrePaquete|Modulo|libreria 
