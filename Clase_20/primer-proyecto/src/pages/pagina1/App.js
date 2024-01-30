@@ -40,3 +40,4 @@ export default function App() {
 */
 //para utilizar el componente en otro documento, solo lo tengo que importar y utilizarlo como una etiqueta de apertura y cierre 
 //<App />
+//para comentarios dentro del return o codigo JS (que vemos en la siguiente clase ) tenemos que englobar entre llaves lo que queremos poner en codigo JS
