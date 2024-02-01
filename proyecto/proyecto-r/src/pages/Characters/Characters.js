@@ -1,5 +1,11 @@
+import Navegation from "../../components/Navagation";//traigo el componente de la navegacion
+
 export default function Characters(){
     return(
-        <p>Pagina Characters</p>
+        <div>
+        <Navegation hoja="Characters"/>
+             <p>Pagina Characters</p>
+        </div>
+       
     )
 }

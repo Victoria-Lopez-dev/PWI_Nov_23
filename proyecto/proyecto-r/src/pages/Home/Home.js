@@ -1,4 +1,7 @@
+import BotonInicio from "../../components/BotonInicio";
+
 import"./Home.css";
+
 export default function Home(){
     return(
         <div className="d-flex justify-content-center aling-items-center vh-100">
@@ -10,8 +13,8 @@ export default function Home(){
                 <p className="text-center">Also you can filter for diferent types of properties to find the character that you are looking for or send us a massage for any concern o sugestion.
                 </p>
                 <p className="text-center">Lets go!</p>
-                <button>Characters</button>
-                <button>Contact</button>        
+                <BotonInicio nombreBoton='Characters'/>
+                <BotonInicio nombreBoton="Contact"/>        
             </div>
 
         </div>

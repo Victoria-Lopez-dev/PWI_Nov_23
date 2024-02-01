@@ -26,6 +26,6 @@ export default function Navegacion({saludo,tituloHoja}) {
 
 //exportar para poder usar este componenete en otro lado
 
-//las props del componente, las recibo como parametro 
+//las props del componente, las recibo como parametro en un gran objeto
 
 //todo JS que quiero usar dentro del return() tengo que colocarlo entre llaves {}.De esta manera diferencia ente codigo JS y codigo HTML
