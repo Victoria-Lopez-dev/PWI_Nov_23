@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio</title>
+    <link rel="stylesheet" href="./style.css"> 
 </head>
 <body>
+    <header>
+        <nav>
+            <!-- <p id="hamb" onclick="desplegarMenu()">MENU H</p> -->
+            <label for="desplegable"><!-- si lo hacemos sin JS, como alternativa usamos CSS y pseoduclases-->
+                <p id="hamb" >MENU H</p>
+            </label>
+            <input type="checkbox" name="desplegable" id="desplegable">
+            <ul>
+                <li>
+                   <a href="./hojaSecundaria.html">ir a hoja secundaria</a> 
+                </li>
+                <li>
+                    <a href="#destino">ir a destino</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <h1>Hoja Secundaria</h1>
     <a href="./index.html">volver a inicio</a>
 </body>
