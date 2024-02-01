@@ -22,3 +22,5 @@ export default function Navegation({hoja}){
     )
 }
 // operador ternario -> condicion ? accion-true : accion-false;
+
+//JSX -> mezcla entre HTML y JS 
