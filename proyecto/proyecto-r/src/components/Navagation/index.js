@@ -24,3 +24,6 @@ export default function Navegation({hoja}){
 // operador ternario -> condicion ? accion-true : accion-false;
 
 //JSX -> mezcla entre HTML y JS 
+//coloco entre llaves el codigo JS dentro del return()
+
+//aplicamos la siguiente logica: si "hoja" es "Characters", marca al item con color verde, sino no .

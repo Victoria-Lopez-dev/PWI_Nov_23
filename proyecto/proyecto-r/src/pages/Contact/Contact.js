@@ -9,3 +9,5 @@ export default function Contact(){
         
     )
 }
+
+//pasamos la prop "hoja" al componente Navegation
