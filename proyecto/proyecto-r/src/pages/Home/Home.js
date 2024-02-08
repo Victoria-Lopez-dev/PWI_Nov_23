@@ -5,6 +5,7 @@ import"./Home.css";
 export default function Home(){
     return(
         <div className="d-flex justify-content-center aling-items-center vh-100">
+        
             <div className="bg-home ">
                 <h1 className="text-center">Proyect Rick & Morty</h1>
                 <h2 className="text-center">Welcome to Rick & Morty Proyect!</h2>
