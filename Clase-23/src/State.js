@@ -1,8 +1,10 @@
 import {useState} from 'react';
 //destructing de todos los metodos que me traigo del paquete de react
 //useState -> metodo propio del paquete de react que nos va a permitir crear estados
-
+//Hooks -> metodos del paquete react que se encargan de manipular|modificar el estado
+//useState() - useEffect() es un Hook 
 import Componente from './Componente2';
+import Componente3 from './Componente3';
 
 import './State.css';
 
@@ -27,12 +29,15 @@ function State() {
     //console.log(info)
   }
 
+
+
   return (
     <div className='d-flex flex-column align-items-center mt-4 gap-3'>
       <h1>{data}</h1>
       <button className='btn btn-success' onClick={cambioData}>click</button>
       <Componente titulo={data}/>
-      </div>
+      <Componente3/>
+    </div>
   );
 }
 

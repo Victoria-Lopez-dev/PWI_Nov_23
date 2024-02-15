@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 import Card from "../Card/Card";
 
@@ -28,14 +28,26 @@ export default function SectionCards(){
         
     };
 
+    useEffect(()=>{
+
+        traerPersonajes()
+
+    },[]);
+    //a penas se cargue por primera vez el componente "SectionCards",ejecute la funcion traerPersonajes
+   
+
+    useEffect(()=>{
+        console.log("se cambio el estado listaPersonajes")
+    },
+    [listaPersonajes])//este useEffect ejecuta la funcion cada vez que note que el estado listaPersonajes se modifica
 
     return(
         <section className="fuenteBlanca">
-            <button onClick={traerPersonajes}>Cargar Personajes</button>
+         
             {
                 listaPersonajes.map((personaje)=>{
                     // return  <Card key={personaje.id} infoPersonaje={personaje}/>
-                    return <Card key={personaje.id} name={personaje.name} image={personaje.image}/>
+                    return <Card key={personaje.id} infoPersonaje={personaje}/>
                 })
             }
             
