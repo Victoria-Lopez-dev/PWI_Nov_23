@@ -9,7 +9,7 @@ function Padre() {
   }
 
   return (
-    <div className='padre'>  
+    <div className='padre' >  
       <h1>Componente Padre</h1>
       <Hijo titulo="hola soy un titulo" info={true} funcion={funcion}/>
       <Hijo titulo="OTRO TITULOOO" info={false}/>

@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 import Card from "../Card/Card";
 
 import "./sectionCards.css"
@@ -7,22 +9,9 @@ export default function SectionCards(){
     //crear una tarjeta por cada personaje
     //iterar con el map para generar una tarjeta por cada personaje
 
-    let listaPersonajes=[
-        {
-            id: 1,
-             name: 'Rick Sanchez', 
-             status: 'Alive', 
-             species: 'Human',
-             image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-            },
-            {
-                id: 2, 
-                name: 'Morty Smith', 
-                status: 'Alive', 
-                species: 'Human', 
-                image:"https://rickandmortyapi.com/api/character/avatar/2.jpeg"}
-            
-        ];
+    let [listaPersonajes,setListaPersonajes]=useState([]);//genero un estado que como inicio es un array vacio que luego lo modifico con la info que traigo de la API
+    
+    
     const traerPersonajes=async()=>{
 
         let info= await fetch("https://rickandmortyapi.com/api/character")//ejecutar la peticion a esa direccion
@@ -34,6 +23,8 @@ export default function SectionCards(){
            //json() -> metodo que evalua lo que le pasemos como JSON y lo parsea , lo tranasforma a una array|objeto
           console.log(info)
         //listaPersonajes=info;//en la proxima clase mejoramos esta asignacion con el concepto de "state" o "estados"
+
+        setListaPersonajes(info)//cambio el estado de listaPersonajes de vacio a la lista con todos los personajes que traemos de la API y va a re-renderizar el componente - actualizarlo
         
     };
 

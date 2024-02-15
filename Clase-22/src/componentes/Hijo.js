@@ -54,6 +54,7 @@ export default function Hijo({titulo,info,funcion}) {
           return  <ItemLista key={item.id} numero={item.data}/>
          })}
         </ul>
+        
         <ol>
         {lista.map((itemLista)=>{
          return  <li key={itemLista.id}>{itemLista.data}</li>
