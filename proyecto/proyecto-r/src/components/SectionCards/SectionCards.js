@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 
 import Card from "../Card/Card";
+import Filters from '../Filters/Filters';
 
 import "./sectionCards.css"
 
@@ -9,8 +10,9 @@ export default function SectionCards(){
     //crear una tarjeta por cada personaje
     //iterar con el map para generar una tarjeta por cada personaje
 
-    let [listaPersonajes,setListaPersonajes]=useState([]);//genero un estado que como inicio es un array vacio que luego lo modifico con la info que traigo de la API
-    
+    let [listaPersonajes,setListaPersonajes]=useState([]);//genero un estado que como inicio es un array vacio que luego lo modifico con la info que traigo de la API;
+    let [personajesCompleto,setPersonajesCompleto]=useState([])
+    let [filtrosAplicados,setFiltrosAplicados]=useState([]);
     
     const traerPersonajes=async()=>{
 
@@ -26,23 +28,57 @@ export default function SectionCards(){
 
         setListaPersonajes(info)//cambio el estado de listaPersonajes de vacio a la lista con todos los personajes que traemos de la API y va a re-renderizar el componente - actualizarlo
         
+        setPersonajesCompleto(info)
     };
 
+
+
+    const filterCharacter=(target)=>{
+        //se fija se se "pulso" o "despulso" un filtro y arma la lista de todos los filtros a aplicar
+        if(target.checked === true){
+            //si se pulso agrega a una lista el filtro aplicado
+            setFiltrosAplicados([...filtrosAplicados,target.value])
+            alert("se pulso un checkbox ")
+        }else{
+            //si "despulso" el filtro
+            alert("se despulso el filtro")
+            let filtrosNuevos=filtrosAplicados.filter((filtro)=> filtro !== target.value);//saco el filtro aplicado de la lista
+            setFiltrosAplicados(filtrosNuevos)//cambio los filtros aplicados
+        }
+    }
+
+   
     useEffect(()=>{
+        setListaPersonajes(personajesCompleto)
+        console.log(filtrosAplicados)
+        //por cada filtro que tiene pulsado, modifica la informacion de "listaPersonaje"
+        filtrosAplicados.forEach((data)=>   {
+            if(data === "Dead" || data ==="Alive"){
+                let dataFiltrada=listaPersonajes.filter((personaje)=>personaje.status === data); 
+                setListaPersonajes(dataFiltrada)
+            }else if(data === "Female" || data ==="Male"){
+                let dataFiltrada=listaPersonajes.filter((personaje)=>personaje.gender === data);
+                setListaPersonajes(dataFiltrada)
+            }else if(data === "Unknown"){
+                let dataFiltrada=listaPersonajes.filter((personaje)=>personaje.origin.name === "unknown");
+                setListaPersonajes(dataFiltrada)
+            }else{
+                setListaPersonajes(personajesCompleto)
+            }
+        })
+        
+    },[filtrosAplicados])
+    //este useEffect se ejecuta cada vez que ve que se modifica la lista de filtros a aplicar
 
+    useEffect(()=>{
         traerPersonajes()
-
     },[]);
     //a penas se cargue por primera vez el componente "SectionCards",ejecute la funcion traerPersonajes
-   
-
-    useEffect(()=>{
-        console.log("se cambio el estado listaPersonajes")
-    },
-    [listaPersonajes])//este useEffect ejecuta la funcion cada vez que note que el estado listaPersonajes se modifica
-
     return(
         <section className="fuenteBlanca">
+
+
+            <Filters filterCharacter={filterCharacter}/>
          
             {
                 listaPersonajes.map((personaje)=>{
@@ -54,3 +90,7 @@ export default function SectionCards(){
         </section>
     )
 };
+
+//creamos una funcion que filtra entre los personajes que tenemos y esta funcion se la pasamos al componente Filters ; y esta ultima a su vez a cada filtro ;para que cuando se pulse dicho filtro se ejecute la funcion
+
+//el parametro "data" dela funcion filterCharacter contiene el "value" del input que se pulso
