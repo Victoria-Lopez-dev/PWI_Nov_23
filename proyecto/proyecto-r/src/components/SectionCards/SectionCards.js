@@ -12,7 +12,7 @@ export default function SectionCards(){
 
     let [listaPersonajes,setListaPersonajes]=useState([]);//genero un estado que como inicio es un array vacio que luego lo modifico con la info que traigo de la API;
     let [personajesCompleto,setPersonajesCompleto]=useState([])
-    let [filtrosAplicados,setFiltrosAplicados]=useState([]);
+    let [filtrosAplicados,setFiltrosAplicados]=useState([]);//lista que inicia vacia de todos los filtros que tenemos marcados para aplicar
     
     const traerPersonajes=async()=>{
 
@@ -32,18 +32,20 @@ export default function SectionCards(){
     };
 
 
+    //funcion que agrega o saca filtros de la lista de filtros a aplicar (actualizo la lista de los filtros a aplicar)
 
     const filterCharacter=(target)=>{
         //se fija se se "pulso" o "despulso" un filtro y arma la lista de todos los filtros a aplicar
         if(target.checked === true){
-            //si se pulso agrega a una lista el filtro aplicado
+            //si se pulso(marcamos el checkbox) agrega a una lista el filtro aplicado
             setFiltrosAplicados([...filtrosAplicados,target.value])
-            alert("se pulso un checkbox ")
+           
         }else{
             //si "despulso" el filtro
-            alert("se despulso el filtro")
+            setListaPersonajes(personajesCompleto)
             let filtrosNuevos=filtrosAplicados.filter((filtro)=> filtro !== target.value);//saco el filtro aplicado de la lista
             setFiltrosAplicados(filtrosNuevos)//cambio los filtros aplicados
+            
         }
     }
 
@@ -62,8 +64,6 @@ export default function SectionCards(){
             }else if(data === "Unknown"){
                 let dataFiltrada=listaPersonajes.filter((personaje)=>personaje.origin.name === "unknown");
                 setListaPersonajes(dataFiltrada)
-            }else{
-                setListaPersonajes(personajesCompleto)
             }
         })
         

@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 //import Home from './pages/Home/Home';
-import Characters from './pages/Characters/Characters';
-//import Contact from './pages/Contact/Contact';
+//import Characters from './pages/Characters/Characters';
+import Contact from './pages/Contact/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       {/*  <Home/>*/}
-      <Characters/>
-      {/* <Contact/>*/}
+      {/*<Characters/>*/}
+       <Contact/>
   </React.StrictMode>
 );
 //por el momento como no sabemos todavia como navegar entre paginas, las cargamos a las 3 y vamos comentando cual estamos queriendo reproducir 
