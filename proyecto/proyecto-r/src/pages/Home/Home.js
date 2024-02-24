@@ -14,8 +14,9 @@ export default function Home(){
                 <p className="text-center">Also you can filter for diferent types of properties to find the character that you are looking for or send us a massage for any concern o sugestion.
                 </p>
                 <p className="text-center">Lets go!</p>
-                <BotonInicio nombreBoton='Characters'/>
-                <BotonInicio nombreBoton="Contact"/>        
+        
+                <BotonInicio nombreBoton='Characters' pasaje="/characters"/>
+                <BotonInicio nombreBoton="Contact" pasaje="/contact"/>        
             </div>
 
         </div>
@@ -25,4 +26,4 @@ export default function Home(){
 
 //armando la primer hoja de nuestro proyecto
 
-//
+//al componente BotonInicio le paso una prop que llamo "pasaje" para que podamos agregarle dicha info a la herramienta <Link> del ruteo

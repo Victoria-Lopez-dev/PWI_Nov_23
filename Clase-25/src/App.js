@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { useEffect ,useState} from 'react';
 import Hijo from './Hijo';
 
@@ -23,8 +25,9 @@ useEffect(()=>{
 //al tener corchetes vacios, se ejecuta cada vez que se reproduce App, ejecuta 1 sola vez al reproducirse|renderizarse 
 return (
     <div >
-      <h1>HOLLA</h1>
+      <h1>Pagina 1 </h1>
       <button onClick={()=>alert("CLICK!!")}>Click</button>
+        <Link to="/hoja2">ir a Hoja2</Link>
      <Hijo pepe={saludar} setDato={setDato}/>
       </div>
   );

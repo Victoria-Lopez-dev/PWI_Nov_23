@@ -80,11 +80,16 @@ export default function SectionCards(){
 
             <Filters filterCharacter={filterCharacter}/>
          
-            {
-                listaPersonajes.map((personaje)=>{
-                    // return  <Card key={personaje.id} infoPersonaje={personaje}/>
-                    return <Card key={personaje.id} infoPersonaje={personaje}/>
-                })
+            {   
+                listaPersonajes.length !== 0 ?
+                    listaPersonajes.map((personaje)=>{
+                        // return  <Card key={personaje.id} infoPersonaje={personaje}/>
+                        return <Card key={personaje.id} infoPersonaje={personaje}/>
+                    })
+                :
+                    <div class="alert alert-success" role="alert">
+                        Sorry! There are no characters width all those properties.
+                    </div>
             }
             
         </section>
@@ -94,3 +99,4 @@ export default function SectionCards(){
 //creamos una funcion que filtra entre los personajes que tenemos y esta funcion se la pasamos al componente Filters ; y esta ultima a su vez a cada filtro ;para que cuando se pulse dicho filtro se ejecute la funcion
 
 //el parametro "data" dela funcion filterCharacter contiene el "value" del input que se pulso
+//armamos un operador ternario para que en caso que la lista de personajes filtrada este vacia, me salte un cartel.

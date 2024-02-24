@@ -17,7 +17,7 @@ export default function Card({infoPersonaje}) {
         <div>
             <img src={infoPersonaje.image}/>
             <h3>{infoPersonaje.name}</h3>
-            <button className="btn btn-success w-50 p-2" onClick={showMore}>Know More...</button>
+            {hide === false? "":<button className="btn btn-success w-50 p-2" onClick={showMore}>Know More...</button>}
         </div>
 
         {
